@@ -1,6 +1,6 @@
 DOTFILES_DIR="$HOME/.dotfiles"
 
-for DOTFILE in "$DOTFILES_DIR"/system/.{function,path,env,alias,completion,grep,prompt,custom}; do
+for DOTFILE in "$DOTFILES_DIR"/system/.{function,path,env,alias,prompt}; do
 	[ -f "$DOTFILE" ] && source "$DOTFILE"
 done
 
