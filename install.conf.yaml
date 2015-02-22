@@ -7,8 +7,9 @@
     ~/.i3: .i3
     ~/.screenlayout: .screenlayout
     ~/.Xresources: .Xresources
-    ~/.config/synapse: .config/synapse
-
+    ~/.config/synapse:
+      create: true
+      path: .config/synapse/
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
