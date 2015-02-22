@@ -4,6 +4,7 @@
     ~/.dotfiles: ''
     ~/.inputrc: runcom/.inputrc
     ~/.bash_profile: runcom/.bash_profile
+    ~/.i3: .i3
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
