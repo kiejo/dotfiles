@@ -1,0 +1,9 @@
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.inputrc: runcom/.inputrc
+    ~/.bash_profile: runcom/.bash_profile
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
