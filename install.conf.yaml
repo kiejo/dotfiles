@@ -3,6 +3,8 @@
 - link:
     ~/.dotfiles: ''
     ~/.inputrc: runcom/.inputrc
+    ~/.bashrc: runcom/.bashrc
+    ~/.profile: runcom/.profile
     ~/.bash_profile: runcom/.bash_profile
     ~/.i3: .i3
     ~/.screenlayout: .screenlayout

@@ -3,9 +3,16 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
+alias la="ls -a"
 
 # Shortcuts
-alias p="~/projects"
+alias p="cd ~/projects"
+
+# Package management
+alias apt-up="sudo apt-get update && sudo apt-get upgrade"
+alias apt-i="sudo apt-get install"
+alias apt-r="sudo apt-get remove"
+alias pkg-i="sudo dpkg -i"
 
 # Reload the shell
-alias reload="source $DOTFILES_DIR/runcom/.bash_profile"
+alias reload="source ~/.bash_profile"

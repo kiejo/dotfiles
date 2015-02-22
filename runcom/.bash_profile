@@ -1,11 +1,7 @@
-DOTFILES_DIR="$HOME/.dotfiles"
+# Make sure everything is loaded for login shells
 
-for DOTFILE in "$DOTFILES_DIR"/system/.{function,path,env,alias,prompt}; do
-	[ -f "$DOTFILE" ] && source "$DOTFILE"
-done
-
-# Clean up
-unset DOTFILE
-
-# Exports
-export DOTFILES_DIR
+# Load login, non-bash related initializations
+source ~/.profile
+ 
+# Load non-login related bash initializations
+source ~/.bashrc
