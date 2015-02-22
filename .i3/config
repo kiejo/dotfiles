@@ -201,10 +201,10 @@ exec --no-startup-id urxvtd
 exec --no-startup-id nm-applet
 
 #set background
-exec --no-startup-id feh --bg-scale ~/.wallpaper/wallpaper.jpg
+#exec --no-startup-id feh --bg-scale ~/.wallpaper/wallpaper.jpg
 
 #set double tap as middle click
-exec --no-startup-id ~/scripts/double_tap.sh
+exec --no-startup-id synclient TapButton2=2
 
 # --autostart end--
 
@@ -215,8 +215,8 @@ bindsym $sup+w exec chromium-browser
 bindsym $sup+e exec thunar
 
 # power
-bindsym $sup+Ctrl+S exec ~/scripts/dbus-suspend
-bindsym $sup+Ctrl+H exec ~/scripts/dbus-halt
+#bindsym $sup+Ctrl+S exec $~/scripts/dbus-suspend
+#bindsym $sup+Ctrl+H exec ~/scripts/dbus-halt
 
 # controls for Spotify
 bindsym XF86AudioPlay exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
