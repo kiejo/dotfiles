@@ -26,8 +26,8 @@ font pango:Droid Sans Mono 9
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec gnome-terminal
-bindsym $sup+t exec gnome-terminal
+bindsym $mod+Return exec xfce4-terminal
+bindsym $sup+t exec xfce4-terminal
 
 # kill focused window
 bindsym $mod+q kill
@@ -206,7 +206,7 @@ exec --no-startup-id synclient TapButton2=2
 # start programs
 bindsym $mod+d exec j4-dmenu-desktop
 bindsym $sup+space exec synapse
-bindsym $sup+w exec chromium
+bindsym $sup+w exec sensible-browser
 bindsym $sup+e exec thunar
 
 # power
