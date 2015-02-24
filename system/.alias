@@ -17,3 +17,7 @@ alias pkg-i="sudo dpkg -i"
 
 # Reload the shell
 alias reload="source ~/.bash_profile"
+
+# Development
+alias docker="sudo docker"
+alias fig="sudo fig"
