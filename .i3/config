@@ -196,7 +196,7 @@ bar {
 exec --no-startup-id nm-applet
 
 #set background
-#exec --no-startup-id feh --bg-scale ~/.wallpaper/wallpaper.jpg
+exec --no-startup-id feh --bg-scale ~/.wallpaper/wallpaper.jpg
 
 #set double tap as middle click
 exec --no-startup-id synclient TapButton2=2
