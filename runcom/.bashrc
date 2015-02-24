@@ -39,4 +39,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-
+# If available, additionally load a local bashrc file
+if [ -f ~/.bashrc_local ]; then
+  source ~/.bashrc_local
+fi
