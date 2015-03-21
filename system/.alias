@@ -20,4 +20,4 @@ alias reload="source ~/.bash_profile"
 
 # Development
 alias docker="sudo docker"
-alias fig="sudo fig"
+alias dcomp="sudo docker-compose"
