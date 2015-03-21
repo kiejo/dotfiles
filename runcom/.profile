@@ -3,7 +3,7 @@
 
 # Set up environment variables and PATH
 DOTFILES_DIR="$HOME/.dotfiles"
-for DOTFILE in "$DOTFILES_DIR"/system/.{env, path}; do
+for DOTFILE in "$DOTFILES_DIR"/system/.{env,path}; do
 	[ -f "$DOTFILE" ] && source "$DOTFILE"
 done
 
