@@ -10,6 +10,7 @@
     ~/.screenlayout: .screenlayout
     ~/.Xresources: .Xresources
     ~/.Xmodmap: .Xmodmap
+    ~/.vimrc: .vimrc
     ~/.config/synapse:
       create: true
       path: .config/synapse/
