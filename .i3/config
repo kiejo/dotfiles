@@ -41,10 +41,10 @@ bindsym $mod+F4 kill
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -53,16 +53,16 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 
 # move focused workspace to other monitor
-bindsym $mod+$sup+j move workspace to output left
-bindsym $mod+$sup+k move workspace to output down
-bindsym $mod+$sup+l move workspace to output up
-bindsym $mod+$sup+semicolon move workspace to output right
+bindsym $mod+$sup+h move workspace to output left
+bindsym $mod+$sup+j move workspace to output down
+bindsym $mod+$sup+k move workspace to output up
+bindsym $mod+$sup+l move workspace to output right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -71,7 +71,7 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+s split h
 
 # split in vertical orientation
 bindsym $mod+v split v
@@ -80,7 +80,7 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
+bindsym $mod+t layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
@@ -122,8 +122,7 @@ bindsym $mod+Shift+0 move container to workspace 10:music
 
 
 # launch apps on specific workspaces
-assign [class="spotify"] 4:music
-
+assign [class="spotify"] 10:music
 
 # colors
 client.focused #d64937 #d64937 #dedede
@@ -136,8 +135,6 @@ new_window normal
 hide_edge_borders vertical
 bindsym $mod+Shift+x [class="^.*"] border toggle
 for_window [class="^.*"] border pixel 1
-for_window [class="rxvt"] border normal
-
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -154,10 +151,10 @@ mode "resize" {
     # Pressing right will grow the window’s width.
     # Pressing up will shrink the window’s height.
     # Pressing down will grow the window’s height.
-    bindsym j resize shrink width 10 px or 10 ppt
-    bindsym k resize grow height 10 px or 10 ppt
-    bindsym l resize shrink height 10 px or 10 ppt
-    bindsym semicolon resize grow width 10 px or 10 ppt
+    bindsym h resize shrink width 10 px or 10 ppt
+    bindsym j resize grow height 10 px or 10 ppt
+    bindsym k resize shrink height 10 px or 10 ppt
+    bindsym l resize grow width 10 px or 10 ppt
 
     # same bindings, but for the arrow keys
     bindsym Left resize shrink width 10 px or 10 ppt
@@ -240,7 +237,6 @@ bindsym $mod+Pause mode "$mode_system"
 
 # direct shortcuts
 bindsym $mod+Shift+s exec $Locker && $suspend
-bindsym $mod+Shift+h exec $Locker && $hibernate
 
 # --power end--
 
@@ -260,8 +256,8 @@ bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+
 bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 5%-
 bindsym XF86AudioMute exec amixer -D pulse set Master 1+ toggle
 #normal keyboard
-bindsym $sup+Ctrl+Up exec amixer -D pulse sset Master 5%+
-bindsym $sup+Ctrl+Down exec amixer -D pulse sset Master 5%-
+bindsym $sup+Ctrl+k exec amixer -D pulse sset Master 5%+
+bindsym $sup+Ctrl+j exec amixer -D pulse sset Master 5%-
 bindsym $sup+Ctrl+M exec amixer -D pulse set Master 1+ toggle
 
 #screen brightness
