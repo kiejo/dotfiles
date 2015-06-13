@@ -9,6 +9,7 @@
     ~/.i3: .i3
     ~/.screenlayout: .screenlayout
     ~/.Xresources: .Xresources
+    ~/.Xmodmap: .Xmodmap
     ~/.config/synapse:
       create: true
       path: .config/synapse/
