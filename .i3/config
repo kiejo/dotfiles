@@ -44,7 +44,7 @@ bindsym $mod+F4 kill
 bindsym $mod+j focus left
 bindsym $mod+k focus down
 bindsym $mod+l focus up
-bindsym $mod+odiaeresis focus right
+bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -56,13 +56,13 @@ bindsym $mod+Right focus right
 bindsym $mod+Shift+j move left
 bindsym $mod+Shift+k move down
 bindsym $mod+Shift+l move up
-bindsym $mod+Shift+odiaeresis move right
+bindsym $mod+Shift+semicolon move right
 
 # move focused workspace to other monitor
 bindsym $mod+$sup+j move workspace to output left
 bindsym $mod+$sup+k move workspace to output down
 bindsym $mod+$sup+l move workspace to output up
-bindsym $mod+$sup+odiaeresis move workspace to output right
+bindsym $mod+$sup+semicolon move workspace to output right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -99,26 +99,26 @@ bindsym $mod+a focus parent
 # switch to workspace
 bindsym $mod+1 workspace 1:web
 bindsym $mod+2 workspace 2:dev
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4:music
+bindsym $mod+3 workspace 3:console
+bindsym $mod+4 workspace 4:research
 bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
+bindsym $mod+6 workspace 6:git
+bindsym $mod+7 workspace 7:mgmt
 bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+9 workspace 9:read
+bindsym $mod+0 workspace 10:music
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1:web
 bindsym $mod+Shift+2 move container to workspace 2:dev
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4:music
+bindsym $mod+Shift+3 move container to workspace 3:console
+bindsym $mod+Shift+4 move container to workspace 4:research
 bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+6 move container to workspace 6:git
+bindsym $mod+Shift+7 move container to workspace 7:mgmt
 bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Shift+9 move container to workspace 9:read
+bindsym $mod+Shift+0 move container to workspace 10:music
 
 
 # launch apps on specific workspaces
@@ -157,7 +157,7 @@ mode "resize" {
     bindsym j resize shrink width 10 px or 10 ppt
     bindsym k resize grow height 10 px or 10 ppt
     bindsym l resize shrink height 10 px or 10 ppt
-    bindsym odiaeresis resize grow width 10 px or 10 ppt
+    bindsym semicolon resize grow width 10 px or 10 ppt
 
     # same bindings, but for the arrow keys
     bindsym Left resize shrink width 10 px or 10 ppt
@@ -200,6 +200,9 @@ exec --no-startup-id feh --bg-scale ~/.wallpaper/wallpaper.jpg
 
 #set double tap as middle click
 exec --no-startup-id synclient TapButton2=2
+
+#set mouse speed
+exec --no-startup-id xset m 12 3
 
 # --autostart end--
 
