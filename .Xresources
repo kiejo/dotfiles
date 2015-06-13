@@ -1,89 +1,62 @@
-###    lovelybacon.deviantart.com   ####
-
-
-urxvt.font:xft:Monospace:pixelsize=13
-urxvt.boldfont:xft:Monospace-Bold:pixelsize=12
-urxvt*termName:         rxvt
-urxvt*background:       #2d2d2d
-urxvt*foreground:       #dedede
-urxvt*scrollBar:        false
-urxvt*matcher.button:   1
-urxvt.transparent:      false
-urxvt*allow_bold:       true
-URxvt*iconFile:         /home/zx/.icons/SimplyGrey/scalable/apps/terminal.svg
-
-URxvt*fading:        0
-URxvt*tintColor:     #ffffff
-URxvt*shading:       0
-URxvt*inheritPixmap: False
-
-!Xft.dpi:       82
+Xft.dpi:       82
 Xft.antialias:  true
 Xft.hinting:    true
 Xft.hintstyle:  hintslight
 
-! --- ~/.Xresources ------------------------------------------------------------
 ! ------------------------------------------------------------------------------
-! --- generated with 4bit Terminal Color Scheme Designer -----------------------
-! ------------------------------------------------------------------------------
-! --- http://ciembor.github.com/4bit -------------------------------------------
+! --- start of terminal colors section -----------------------------------------
 ! ------------------------------------------------------------------------------
 
-! --- special colors ---
+! Base16 Atelier Forest
+! Scheme: Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/forest)
 
-*background: #14151f
-*foreground: #ccddee
+#define base00 #1b1918
+#define base01 #2c2421
+#define base02 #68615e
+#define base03 #766e6b
+#define base04 #9c9491
+#define base05 #a8a19f
+#define base06 #e6e2e0
+#define base07 #f1efee
+#define base08 #f22c40
+#define base09 #df5320
+#define base0A #d5911a
+#define base0B #5ab738
+#define base0C #00ad9c
+#define base0D #407ee7
+#define base0E #6666ea
+#define base0F #c33ff3
 
-! --- standard colors ---
+*.foreground:   base05
+*.background:   base00
+*.cursorColor:  base05
 
-! black
-*color0: #000000
+*.color0:       base00
+*.color1:       base08
+*.color2:       base0B
+*.color3:       base0A
+*.color4:       base0D
+*.color5:       base0E
+*.color6:       base0C
+*.color7:       base05
 
-! bright_black
-*color8: #545454
+*.color8:       base03
+*.color9:       base08
+*.color10:      base0B
+*.color11:      base0A
+*.color12:      base0D
+*.color13:      base0E
+*.color14:      base0C
+*.color15:      base07
 
-! red
-*color1: #914b5b
-
-! bright_red
-*color9: #c5aebc
-
-! green
-*color2: #439c57
-
-! bright_green
-*color10: #a4d0ba
-
-! yellow
-*color3: #919857
-
-! bright_yellow
-*color11: #c5cfba
-
-! blue
-*color4: #3f4fa8
-
-! bright_blue
-*color12: #a3b0dc
-
-! magenta
-*color5: #8c4ba8
-
-! bright_magenta
-*color13: #c3aedc
-
-! cyan
-*color6: #3f9ca4
-
-! bright_cyan
-*color14: #a3d0db
-
-! white
-*color7: #d9d9d9
-
-! bright_white
-*color15: #ffffff
-
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+*.color16:      base09
+*.color17:      base0F
+*.color18:      base01
+*.color19:      base02
+*.color20:      base04
+*.color21:      base06
 
 ! ------------------------------------------------------------------------------
 ! --- end of terminal colors section -------------------------------------------
