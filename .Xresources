@@ -1,23 +1,23 @@
 ###    lovelybacon.deviantart.com   ####
 
 
-urxvt.font:xft:Monospace:pixelsize=14
-urxvt.boldfont:xft:Monospace-Bold:pixelsize=13
+urxvt.font:xft:Monospace:pixelsize=13
+urxvt.boldfont:xft:Monospace-Bold:pixelsize=12
 urxvt*termName:         rxvt
 urxvt*background:       #2d2d2d
 urxvt*foreground:       #dedede
 urxvt*scrollBar:        false
 urxvt*matcher.button:   1
-urxvt.transparent:    false
-urxvt*allow_bold:    true
-URxvt*iconFile:          /home/zx/.icons/SimplyGrey/scalable/apps/terminal.svg
+urxvt.transparent:      false
+urxvt*allow_bold:       true
+URxvt*iconFile:         /home/zx/.icons/SimplyGrey/scalable/apps/terminal.svg
 
 URxvt*fading:        0
 URxvt*tintColor:     #ffffff
-URxvt*shading:        0
-URxvt*inheritPixmap:     False
+URxvt*shading:       0
+URxvt*inheritPixmap: False
 
-!Xft.dpi:        101
+!Xft.dpi:       82
 Xft.antialias:  true
 Xft.hinting:    true
 Xft.hintstyle:  hintslight
