@@ -1,5 +1,9 @@
 {
   "ui" : {
+    "global" : {
+      "ui-type" : "virgilio",
+      "show-indicator" : false
+    },
     "shortcuts" : {
       "activate" : "<Super>space",
       "execute" : "Return",
@@ -20,10 +24,6 @@
       "paste" : "<Control>v",
       "alt-paste" : "<Shift>Insert",
       "exit" : "<Control>q"
-    },
-    "global" : {
-      "ui-type" : "virgilio",
-      "show-indicator" : false
     }
   }
 }
