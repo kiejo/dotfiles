@@ -255,14 +255,15 @@ bindsym $sup+Ctrl+Right exec dbus-send --print-reply --dest=org.mpris.MediaPlaye
 bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+
 bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 5%-
 bindsym XF86AudioMute exec amixer -D pulse set Master 1+ toggle
+
 #normal keyboard
 bindsym $sup+Ctrl+k exec amixer -D pulse sset Master 5%+
 bindsym $sup+Ctrl+j exec amixer -D pulse sset Master 5%-
-bindsym $sup+Ctrl+M exec amixer -D pulse set Master 1+ toggle
+bindsym $sup+Ctrl+m exec amixer -D pulse set Master 1+ toggle
 
 #screen brightness
 bindsym $sup+x exec xbacklight -inc 15
-bindsym $sup+y exec xbacklight -dec 15
+bindsym $sup+shift+x exec xbacklight -dec 15
 
 
 #multi monitor
