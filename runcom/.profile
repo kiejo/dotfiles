@@ -11,3 +11,8 @@ done
 unset DOTFILE
 
 export DOTFILES_DIR
+
+# Needed to show all settings in gnome-control-center
+if [ $XDG_CURRENT_DESKTOP="i3" ]; then
+  XDG_CURRENT_DESKTOP="Unity"
+fi

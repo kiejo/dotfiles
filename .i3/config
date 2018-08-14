@@ -15,30 +15,18 @@ set $sup Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
-font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-# The font above is very space-efficient, that is, it looks good, sharp and
-# clear in small sizes. However, if you need a lot of unicode glyphs or
-# right-to-left text rendering, you should instead use pango for rendering and
-# chose a FreeType font, such as:
-font pango:Droid Sans Mono 9
+font pango:Cantarell 9 
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec xfce4-terminal
-bindsym $sup+t exec xfce4-terminal
+bindsym $mod+Return exec gnome-terminal
+bindsym $sup+t exec gnome-terminal
 
 # kill focused window
 bindsym $mod+q kill
 bindsym $mod+F4 kill
-
-# start dmenu (a program launcher)
-#bindsym $mod+d exec dmenu_run
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 bindsym $mod+h focus left
@@ -189,11 +177,13 @@ bar {
 
 # --autostart--
 
+# Additional exec: https://www.reddit.com/r/i3wm/comments/3n7txe/i_cant_get_rid_of_the_loading_mouse_cursor_on/
+
 #wireless indicator
-exec --no-startup-id nm-applet
+exec --no-startup-id exec nm-applet
 
 #set background
-exec --no-startup-id feh --bg-scale ~/.wallpaper/wallpaper.jpg
+exec --no-startup-id exec feh --bg-fill ~/.wallpaper/nuclino_wallpaper_01.png
 
 #set double tap as middle click
 exec --no-startup-id synclient TapButton2=2
@@ -204,20 +194,20 @@ exec --no-startup-id xset m 12 3
 # --autostart end--
 
 # start programs
-bindsym $mod+d exec j4-dmenu-desktop
-bindsym $sup+space exec synapse
+#bindsym $mod+d exec j4-dmenu-desktop
+bindsym $sup+space exec "rofi -combi-modi window,drun,run -show combi"
 bindsym $sup+w exec sensible-browser
-bindsym $sup+e exec thunar
+bindsym $sup+e exec nautilus
 
 
 # --power--
 
 # sleep 1 adds a small delay to prevent possible race conditions with suspend
 set $Locker i3lock && sleep 1
-set $hibernate dbus-send --system --print-reply --dest="org.freedesktop.UPower" /org/freedesktop/UPower org.freedesktop.UPower.Hibernate
-set $suspend   dbus-send --system --print-reply --dest="org.freedesktop.UPower" /org/freedesktop/UPower org.freedesktop.UPower.Suspend
-set $restart   dbus-send --system --print-reply --dest="org.freedesktop.ConsoleKit" /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.Restart
-set $shutdown  dbus-send --system --print-reply --dest="org.freedesktop.ConsoleKit" /org/freedesktop/ConsoleKit/Manager org.freedesktop.ConsoleKit.Manager.Stop
+set $hibernate systemctl hibernate -i
+set $suspend systemctl suspend -i
+set $restart systemctl reboot -i
+set $shutdown systemctl halt -i
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
@@ -250,6 +240,8 @@ bindsym XF86AudioNext exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2
 bindsym $sup+Ctrl+space exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
 bindsym $sup+Ctrl+Left exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
 bindsym $sup+Ctrl+Right exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
+bindsym $sup+Ctrl+l exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next
+bindsym $sup+Ctrl+h exec dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous
 
 # control Volume with Volume Keys
 bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+
@@ -260,14 +252,3 @@ bindsym XF86AudioMute exec amixer -D pulse set Master 1+ toggle
 bindsym $sup+Ctrl+k exec amixer -D pulse sset Master 5%+
 bindsym $sup+Ctrl+j exec amixer -D pulse sset Master 5%-
 bindsym $sup+Ctrl+m exec amixer -D pulse set Master 1+ toggle
-
-#screen brightness
-bindsym $sup+x exec xbacklight -inc 15
-bindsym $sup+shift+x exec xbacklight -dec 15
-
-
-#multi monitor
-bindsym $sup+$mod+e exec ~/.screenlayout/hdmi.sh
-bindsym $sup+$mod+i exec ~/.screenlayout/laptop.sh
-bindsym $sup+$mod+d exec ~/.screenlayout/laptop_hdmi.sh
-bindsym $sup+$mod+o exec ~/.screenlayout/office_vga_hdmi.sh
